@@ -54,7 +54,7 @@
                 <div class="li-triangle"></div>
             </li>
             
-            <?php $terms = get_terms('template-category'); ?>
+            <?php $terms = get_terms('template-category', array('orderby'=>'id', 'order'=>'asc')); ?>
             <?php foreach ($terms as $term) { ?>  
             <li data-category="<?php echo $term->term_id ?>" class="">
                 <p><i class="fa <?php echo get_option('template-icon-'.$term->term_id) ?> fa-2x"></i></p>
