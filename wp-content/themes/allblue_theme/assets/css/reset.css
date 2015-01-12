@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'myFont';
+    src: url('../fonts/segoe_ui/segoeui.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'myFont';
+    src: url('../fonts/segoe_ui/segoeuib.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'myFont';
+    src: url('../fonts/segoe_ui/segoeuii.ttf');
+    font-style: italic;
+}
+
+html {
+    font-family: 'myFont', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #444;
+    background-color: #fafafa;
+}
+body, a, table, tr, td, a, img, div, p, span, ul, li, input, textarea, button {
+    margin: 0;
+    padding: 0;
+}
+a {
+    display: inline-block;
+    color: #2194d2;
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    color: #23527c;
+    text-decoration: none;
+}
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+code,
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+td,
+th {
+    padding: 0;
+}
+img {
+    vertical-align: middle;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #D1D1D1;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+h1,
+.h1 {
+    font-size: 24px;
+}
+h2,
+.h2 {
+    font-size: 20px;
+}
+h3,
+.h3 {
+    font-size: 18px;
+}
+h4,
+.h4 {
+    font-size: 16px;
+}
+h5,
+.h5 {
+    font-size: 15px;
+}
+h6,
+.h6 {
+    font-size: 14px;
+}
+p {
+    margin: 4px 0px;
+}
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+.list-inline > li {
+    display: inline-block;
+}
+.clear-fix {
+    clear: both;
+}
+.dark {
+    color: #222;
+}
+.light {
+    color: #666;
+}
+.blue {
+    color: #2194d2;
+}
+p.help {
+    font-size: 16px;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.small {
+    font-size: 13px;
+}
+.tiny {
+    font-size: 12px;
+}
+input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
+    min-width: 350px;
+    border: solid 1px #c6c6c6;
+    padding: 8px 15px;
+    font-size: 15px;
+    border-radius: 1px;
+    margin: 8px 0px;
+}
+textarea {
+    min-width: 500px;
+    border: solid 1px #c6c6c6;
+    padding: 8px 15px;
+    font-size: 15px;
+    border-radius: 1px;
+    margin: 8px 0px;
+}
+input[type="text"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+    box-shadow: 0px 0px 2px #bebebe inset;
+}
+input[type="submit"], input[type="button"], button {
+    padding: 8px 18px;
+    font-size: 15px;
+    border-radius: 1px;
+    margin: 8px 0px;
+    background: #2194d2;
+    border-radius: 1px;
+    color: #fff;
+    border: none;
+}
+input[type="submit"]:hover, input[type="button"]:hover, button:hover {
+    background: #1675d2;
+}
