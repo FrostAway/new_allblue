@@ -80,7 +80,7 @@
             </div>
             <div class="right-nav">
                 <h1>Tin mới</h1>
-                <?php query_posts(array('showposts'=>5, 'orderby'=>'date', 'order'=>'asc')); ?>
+                <?php query_posts(array('showposts'=>5, 'post_type'=>'post', 'orderby'=>'date', 'order'=>'asc')); ?>
                 
                 <ul class="list-unstyled">
                     <?php if(have_posts()): while(have_posts()): the_post(); ?>

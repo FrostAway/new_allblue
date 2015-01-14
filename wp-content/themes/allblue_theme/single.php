@@ -29,10 +29,13 @@
             </div>
             <div class="right-nav">
                 <h1>Tin mới</h1>
+                <?php query_posts(array('showposts'=>5, 'post_type'=>'post', 'orderby'=>'date', 'order'=>'asc')); ?>
+                
                 <ul class="list-unstyled">
-                    <li><i class="fa fa-angle-right"></i><a href="#">IKI.vn - Hệ thống thời trang xuất khẩu hàng Việt Nam chất lượng cao</a></li>
-                    <li><i class="fa fa-angle-right"></i><a href="#">IKI.vn - Hệ thống thời trang xuất khẩu</a></li>
-                    <li><i class="fa fa-angle-right"></i><a href="#">IKI.vn - Hệ thống thời trang xuất khẩu</a></li>
+                    <?php if(have_posts()): while(have_posts()): the_post(); ?>
+                    <li><i class="fa fa-angle-right"></i><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+                    <?php endwhile; wp_reset_postdata(); ?>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
