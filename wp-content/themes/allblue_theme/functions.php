@@ -48,15 +48,15 @@ function my_post_queries($query) {
         // alter the query for the home and category pages 
 
         if (is_home()) {
-            $query->set('posts_per_page', 1);
+            $query->set('posts_per_page', 3);
         }
 
         if (is_category()) {
-            $query->set('posts_per_page', 1);
+            $query->set('posts_per_page', 5);
         }
 
         if (is_search()) {
-            $query->set('posts_per_page', 1);
+            $query->set('posts_per_page', 10);
         }
     }
 }
@@ -69,7 +69,7 @@ function the_breadcrumb() {
 
     if (!is_home()) {
 
-        echo '<span><a href="">';
+        echo '<span><a href="'.  home_url().'">';
         echo 'Trang chủ';
         echo '</a></span><span><i class="fa fa-angle-right"></i></span>';
         if (is_category()) {

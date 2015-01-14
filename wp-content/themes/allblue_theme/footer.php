@@ -28,23 +28,23 @@
             <table>
                 <tr>
                     <td><i class="fa fa-angle-right"></i></td>
-                    <td><a href="#">Trang chủ</a></td>
+                    <td><a href="<?php echo home_url() ?>">Trang chủ</a></td>
                 </tr>
                 <tr>
                     <td><i class="fa fa-angle-right"></i></td>
-                    <td><a href="#">Giới thiệu</a></td>
+                    <td><a href="<?php echo home_url() ?>/?page_id=19">Giới thiệu</a></td>
                 </tr>
                 <tr>
                     <td><i class="fa fa-angle-right"></i></td>
-                    <td><a href="#">Dịch vụ</a></td>
+                    <td><a href="<?php echo home_url() ?>?page_id=">Dịch vụ</a></td>
                 </tr>
                 <tr>
                     <td><i class="fa fa-angle-right"></i></td>
-                    <td><a href="#">Kho giao diện</a></td>
+                    <td><a href="<?php echo home_url() ?>?page_id=36">Kho giao diện</a></td>
                 </tr>
                 <tr>
                     <td><i class="fa fa-angle-right"></i></td>
-                    <td><a href="#">Liên hệ</a></td>
+                    <td><a href="<?php echo home_url() ?>?page_id=17">Liên hệ</a></td>
                 </tr>
             </table>
         </div>

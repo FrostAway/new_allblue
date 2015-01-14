@@ -3,7 +3,7 @@
 
 <?php
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    $args = array('posts_per_page' => 1, 'paged' => $paged , 'cat' => $cat);
+    $args = array('posts_per_page' => 5, 'paged' => $paged , 'cat' => $cat);
     query_posts($args);  
 ?>
 <?php if (have_posts()) : ?>
@@ -66,6 +66,11 @@
                         ?>
                 </ul>
             </div>
+            <?php else : ?>
+
+		<h2>Nothing found</h2>
+
+            <?php endif; ?>
         </div>
         <div class="right">
             <div class="ads">
@@ -75,21 +80,21 @@
             </div>
             <div class="right-nav">
                 <h1>Tin mới</h1>
+                <?php query_posts(array('showposts'=>5, 'orderby'=>'date', 'order'=>'asc')); ?>
+                
                 <ul class="list-unstyled">
-                    <li><i class="fa fa-angle-right"></i><a href="#">IKI.vn - Hệ thống thời trang xuất khẩu hàng Việt Nam chất lượng cao</a></li>
-                    <li><i class="fa fa-angle-right"></i><a href="#">IKI.vn - Hệ thống thời trang xuất khẩu</a></li>
-                    <li><i class="fa fa-angle-right"></i><a href="#">IKI.vn - Hệ thống thời trang xuất khẩu</a></li>
+                    <?php if(have_posts()): while(have_posts()): the_post(); ?>
+                    <li><i class="fa fa-angle-right"></i><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+                    <?php endwhile; wp_reset_postdata(); ?>
+                    <?php endif; ?>
                 </ul>
+                
             </div>
         </div>
         <div class="clear-fix"></div>
     </div>
 </div>
                                 
-        <?php else : ?>
-
-		<h2>Nothing found</h2>
-
-	<?php endif; ?>
+        
 
 <?php get_footer(); ?>
