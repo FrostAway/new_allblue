@@ -245,7 +245,7 @@
     <div class="wrapper">
         <div class="post-left">
             <h1 class="">BẢN TIN ALLBLUE</h1><div class="clear-fix"></div>
-            <?php query_posts(array('posts_per_page' => 3, 'paged' => $paged));  ?>
+            <?php query_posts(array('posts_per_page' => 3, 'paged' => $paged, 'category__not_in'=>array(16)));  ?>
             <?php if(have_posts()): while(have_posts()) : the_post(); ?>
             <div class="post-item">
                 <?php the_post_thumbnail(); ?>
@@ -258,7 +258,7 @@
                 </div>
                 <div class="clear-fix"></div>
             </div>
-            <?php endwhile; ?>
+            <?php endwhile;                 wp_reset_postdata() ?>
             
             <?php endif; ?>
             
