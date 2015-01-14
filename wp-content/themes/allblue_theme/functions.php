@@ -178,6 +178,8 @@ function set_template_image() {
     <div id="template-image-box">
     <?php if(isset($tpl_image)){ ?>
     <img id="show-tpl-imgurl" src="<?php echo $tpl_image; ?>" style="width: 810px; margin: 5px;" />
+    <?php }else{ ?>
+    <img id="show-tpl-imgurl" src="<?php echo get_template_directory_uri() ?>/assets/images/templates/item3.jpg" style="" />
     <?php } ?>
     </div>
     <script>
@@ -190,7 +192,7 @@ function set_template_image() {
             window.send_to_editor = function (html) {
                 imgurl = jQuery('img', html).attr('src');
                 jQuery(imgid).val(imgurl);
-                jQuery("#template-image-box").append(
+                jQuery("#template-image-box").html(
                         '<img id="show-tpl-imgurl" src="'+imgurl+'" style="width: 810px; margin: 5px;" />'
                                         );
                 tb_remove();
@@ -262,4 +264,7 @@ function category_form_custom_field_save($term_id, $tt_id) {
         update_option($option_name, $_POST['template-icon']);
     }
 }
+
+
+
 ?>
