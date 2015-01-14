@@ -175,18 +175,24 @@ function set_template_image() {
 
     <input type="hidden" name="template-image" id="imgurl" value="<?php if (isset($tpl_image)) echo $tpl_image; ?>" />
     <input onclick="upload_image('#imgurl')" type="submit" id="btn-upload" value="Upload Image" /> <br />
-    <img id="show-tpl-imgurl" src="<?php if (isset($tpl_image)) echo $tpl_image; ?>" style="width: 800px; margin: 5px;" />
+    <div id="template-image-box">
+    <?php if(isset($tpl_image)){ ?>
+    <img id="show-tpl-imgurl" src="<?php echo $tpl_image; ?>" style="width: 810px; margin: 5px;" />
+    <?php } ?>
+    </div>
     <script>
         jQuery("#btn-upload").click(function () {
             return false;
         });
         function upload_image(imgid) {
-            tb_show('', 'media-upload.php?type=image&TB_iframe=true');
+            tb_show('', 'media-upload.php?type=image&height=550&width=1000&TB_iframe=true');
 
             window.send_to_editor = function (html) {
                 imgurl = jQuery('img', html).attr('src');
                 jQuery(imgid).val(imgurl);
-                jQuery("#show-tpl-imgurl").attr("src", imgurl);
+                jQuery("#template-image-box").append(
+                        '<img id="show-tpl-imgurl" src="'+imgurl+'" style="width: 810px; margin: 5px;" />'
+                                        );
                 tb_remove();
             };
         }
