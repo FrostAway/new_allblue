@@ -77,16 +77,17 @@
                         $term_id .= $term->term_id . ' ';
                     }
                     ?>
-            <div class="template-box" cat="<?php echo $term_id ?>">
+            
+            <div cat="<?php echo $term_id; ?>" class="template-box" style="display: block;">
                 <div class="template-img">
                     <?php the_post_thumbnail(); ?>
-                    <div class="layer"></div>
-                    <a class="view-template" data-img="<?php echo get_post_meta(get_the_ID(), 'template-image', tre); ?>">
-                        <i class="fa fa-search fa-2x"></i> Chi tiết
+                    <div class="layer" style="opacity: 0;"></div>
+                    <a href="#" data-img="<?php echo get_post_meta(get_the_ID(), 'template-image', true); ?>" class="view-template" style="display: none;">
+                        <i class="fa fa-search"></i> Chi tiết
                     </a>
                 </div>
                 <h5><?php the_title(); ?></h5>
-                <p class="template-note"><?php echo get_the_excerpt(); ?></p>
+                <p class="template-note"><?php get_the_excerpt(); ?></p>
             </div>
             <?php endwhile; else: ?>
             

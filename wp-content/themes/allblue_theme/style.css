@@ -401,7 +401,6 @@ ul.dropdown-menu>li>a:hover {
 }
 #progress p {
     color: #b1e0f9;
-    font-size: 16px;
 }
 .progress-box {
     float: left;
@@ -899,17 +898,4 @@ h1#customer-quote {
     left: -15px;
     top: 5px;
     color: #2194d2;
-}
-
-/*********** contact page ***********/
-#contact .left {
-    float: left;
-    width: 50%;
-}
-#contact .right {
-    float: right;
-    width: 40%;
-}
-#contact table td {
-    padding: 10px;
 }
