@@ -265,6 +265,18 @@ function category_form_custom_field_save($term_id, $tt_id) {
     }
 }
 
-
+// contact form
+if (isset($_POST['contact-submit'])) {
+    $contact = $_POST['contact'];
+    $content = $contact['content']."\n\n".'Người gửi: '.$contact['name']."\n\n".$contact['email'];
+    $headers[] = 'From '.$contact['name'].' <'.$contact['email'].'>';
+    if (wp_mail(get_option('mailserver_login'), $contact['subject'], $content, $headers)) {
+        echo '<p class="message-succ">Đã gửi liên hệ thành công, Chúng tôi sẽ sớm hồi đáp</p>';
+        wp_redirect(home_url());
+        exit();
+    } else {
+        echo '<p class="message-error">Có lỗi xảy ra vui lòng nhập lại</p>';
+    }
+}
 
 ?>
