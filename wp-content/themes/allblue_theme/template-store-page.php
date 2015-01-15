@@ -36,7 +36,7 @@
     <div id="templates-body">
         <div class="wrapper">
 
-            <?php query_posts(array('post_type' => 'template')); ?>
+            <?php query_posts(array('post_type' => 'template', 'posts_per_page'=>4)); ?>
             <?php if (have_posts()): while (have_posts()): the_post(); ?>
 
                     <?php
@@ -59,7 +59,11 @@
                     </div>
 
                 <?php endwhile;
-            else: ?>
+                $big = 99999999;
+                        echo paginate_links(array(
+                            'base'      => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+                        ));
+                else: ?>
 
                 <h2>None</h2>
 

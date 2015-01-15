@@ -65,6 +65,7 @@
     </div>
     <a href="javascript:void(0)" id="up-button"><i class="fa fa-arrow-up"></i></a>
 </div>
+
 <!---- / #footer ---->
 <?php wp_footer(); ?>
 	
